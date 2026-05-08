@@ -63,9 +63,9 @@ This information is memoized to avoid re-computation during prompt redraws, whic
 * `lucid_prompt_symbol_error`: the prompt symbol when an error occurs.
    Default: `❯`
 * `lucid_prompt_symbol_color`: the color of the prompt symbol.
-   Default: `$fish_color_normal`
+   Default: `normal`
 * `lucid_prompt_symbol_error_color`: the color of the prompt symbol when an
-   error occurs. Default: `$fish_color_normal`
+   error occurs. Default: `normal`
 
 ## Design
 
