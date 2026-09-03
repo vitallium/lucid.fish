@@ -129,17 +129,17 @@ function __lucid_git_status
                                 case 0
                                     set -g __lucid_dirty_state 0
                                     if status is-interactive
-                                        commandline -f repaint-mode
+                                        commandline -f repaint
                                     end
                                 case 1
                                     set -g __lucid_dirty_state 1
                                     if status is-interactive
-                                        commandline -f repaint-mode
+                                        commandline -f repaint
                                     end
                                 case '*'
                                     set -g __lucid_dirty_state 2
                                     if status is-interactive
-                                        commandline -f repaint-mode
+                                        commandline -f repaint
                                     end
                             end
                         end
