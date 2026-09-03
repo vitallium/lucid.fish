@@ -178,30 +178,6 @@ function __lucid_git_status
     set_color normal
 end
 
-function __lucid_vi_indicator
-    if [ $fish_key_bindings = "fish_vi_key_bindings" ]
-        switch $fish_bind_mode
-            case "insert"
-                set_color green
-                echo -n "[I] "
-            case "default"
-                set_color red
-                echo -n "[N] "
-            case "visual"
-                set_color yellow
-                echo -n "[S] "
-            case "replace"
-                set_color blue
-                echo -n "[R] "
-        end
-        set_color normal
-    end
-end
-
-# Suppress default mode prompt
-function fish_mode_prompt
-end
-
 function fish_prompt
     set -l last_pipestatus $pipestatus
     set -l cwd (pwd | string replace "$HOME" '~')
@@ -222,7 +198,7 @@ function fish_prompt
     end
 
     echo ''
-    __lucid_vi_indicator
+    fish_mode_prompt
 
     set -l prompt_symbol "$lucid_prompt_symbol"
     set -l prompt_symbol_color "$lucid_prompt_symbol_color"
